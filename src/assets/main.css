@@ -1,0 +1,33 @@
+/* src/assets/main.css */
+
+/* Kamu bisa mengatur ulang beberapa gaya dasar di sini jika perlu */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif; /* Atur font default */
+}
+
+/* Gaya untuk semua section */
+section {
+    padding: 80px 20px;
+    margin: 100px 0;
+}
+
+/* Gaya untuk card agar konsisten, jika diperlukan secara global */
+.card {
+    justify-content: center ;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    box-shadow: 0 9px 9px rgba(201, 150, 255, 0.1);
+    font-family: "Poppins", sans-serif;
+    max-width: 500px;
+}
+
+.company {
+    font-family: "Poppins", sans-serif;
+    color: #8f94fb;
+}
