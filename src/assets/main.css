@@ -14,18 +14,6 @@ section {
 }
 
 /* Gaya untuk card agar konsisten, jika diperlukan secara global */
-.card {
-    justify-content: center ;
-    align-items: center;
-    text-align: left;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    box-shadow: 0 9px 9px rgba(201, 150, 255, 0.1);
-    font-family: "Poppins", sans-serif;
-    max-width: 500px;
-}
 
 .company {
     font-family: "Poppins", sans-serif;

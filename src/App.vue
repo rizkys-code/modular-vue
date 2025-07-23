@@ -77,6 +77,7 @@ const projects = ref([
     <Experience :items="experiences" />
     <Skills :items="skills" />
     <Project :items="projects" />
+    
 
   </main>
   <!-- Kamu bisa menambahkan komponen Footer di sini nantinya -->

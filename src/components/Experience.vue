@@ -2,28 +2,29 @@
   <section id="experience-me" class="experience">
     <h2>Work Experience</h2>
     <div class="experience-container">
-      <div class="card">
-        <h3>Laborartorium ICT Terpadu</h3>
-        <p class="company">Laborartorium ICT Terpadu | 2025 - Present</p>
-        <p>
-          Assisted students during lab sessions, maintained lab equipment, and provided solutions for basic technical issues encountered during practicals.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Budi Luhur IT Club</h3>
-        <p class="company">Budi Luhur IT CLUB | 2025 - Present</p>
-        <p>
-          Assisted students during lab sessions, maintained lab equipment, <br />
-          and provided solutions for basic technical issues encountered during practicals.
-        </p>
-      </div>
+      <!-- v-for tetap di sini, tapi kita ganti div dengan komponen Card -->
+      <Card v-for="(item, index) in items" :key="index">
+        <!-- Semua konten ini akan dimasukkan ke dalam <slot> di Card.vue -->
+        <h3>{{ item.title }}</h3>
+        <p class="company">{{ item.company }}</p>
+        <p>{{ item.description }}</p>
+      </Card>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+// 1. Impor komponen Card
+import Card from './Card.vue'
+
+// 2. Props tetap sama
+defineProps({
+  items: Array
+})
+</script>
 
 <style scoped>
+/* CSS di sini menjadi jauh lebih sedikit! Hanya untuk layout container. */
 .experience {
   display: flex;
   flex-direction: column;
@@ -38,11 +39,15 @@
   width: 100%;
   max-width: 800px;
 }
-
-/* Responsiveness untuk layar kecil */
 @media (max-width: 768px) {
   .experience-container {
     grid-template-columns: 1fr;
   }
+}
+/* Class .company masih bisa di-style di sini jika perlu, atau dipindah ke global */
+.company {
+    font-family: "Poppins", sans-serif;
+    color: #8f94fb;
+    font-weight: 500;
 }
 </style>
